@@ -1,0 +1,73 @@
+.cart-count {
+    position: relative;
+    margin-right: 20px;
+}
+.cart-count-display {
+    position: absolute;
+    width: 100%;
+    top:9px;
+    left: 0;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+.cart-count-display.active {
+    opacity: 1;
+}
+.cart-count-total {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    color: #0a0d0f;
+    -webkit-transition: color 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+    -moz-transition:color 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+    transition: color 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+}
+
+
+.cart-count-bag::after{
+    font-family: "grana-icons";
+     font-style: normal;
+     font-weight: normal;
+     speak: none;
+     display: inline-block;
+     text-decoration: inherit;
+     width: 1em;
+     margin-right: .2em;
+     text-align: center;
+     /* opacity: .8; */
+     font-variant: normal;
+     text-transform: none;
+     line-height: 1em;
+     margin-left: .2em;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+
+}
+.cart-count-bag::after {
+    position: relative;
+    content: '\e816';
+    font-size: 2rem;
+    top: 0px;
+    color: #0a0d0f;
+    -webkit-transition: color 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+    -moz-transition:color 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+    transition: color 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
+}
+body.cms-home.page-layout-pt2000-landing #head .cart-count-total,
+body.cms-home.page-layout-pt2000-landing #head .cart-count-bag::after {
+    color: #ffffff;
+}
+body.cms-home.page-layout-pt2000-landing #head.reveal .cart-count-total,
+body.cms-home.page-layout-pt2000-landing #head.reveal .cart-count-bag::after,
+body.cms-home.page-layout-pt2000-landing #head.static .cart-count-total,
+body.cms-home.page-layout-pt2000-landing #head.static .cart-count-bag::after{
+    color: #0a0d0f;
+}

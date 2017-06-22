@@ -1,0 +1,9 @@
+$(document).ready(function(){
+    $("#header")
+    .mouseenter(function(){
+        $("#head").addClass("reveal");
+    })
+    .mouseleave(function(){
+        $("#head").removeClass("reveal");
+    });
+});

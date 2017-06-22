@@ -1,0 +1,31 @@
+/*
+    Font Bradon
+*/
+
+@font-face {
+    font-family: brandom-bold;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../assets/font/Brandom_bld.otf);
+}
+
+@font-face {
+    font-family: brandom-medium;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../assets/font/Brandom_med.otf);
+}
+
+@font-face {
+    font-family: brandom-regular;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../assets/font/Brandom_reg.otf);
+}
+
+@font-face {
+    font-family: grana-icons;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../assets/font/grana_icons_v3.02.ttf) format("truetype");
+}

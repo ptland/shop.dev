@@ -5,11 +5,20 @@ select,
 textarea {
     font-family: 'Montserrat', sans-serif;
     color: #363B40;
+    font-size: 0.85rem;
 }
-.container {
+a[href], input[type="submit"], input[type="image"], label[for], select, button, .pointer {
+    cursor: pointer;
+    cursor: hand;
+}
+.container, .link-row {
     min-width: 1200px;
     width: 1200px;
 }
+.link-row.is-gapless{
+    margin: 0 auto;
+}
+
 .header-container {
     height: auto;
     width: 100%;
@@ -105,7 +114,7 @@ body.cms-home.page-layout-pt2000-landing #head .pt-nav a.nav-item:hover {
     color:#fff;
 }
 .pt-nav .nav-item{
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     padding: 0.5rem 1.3rem;
     font-weight: 500;
 }
@@ -130,6 +139,105 @@ body.cms-home.page-layout-pt2000-landing #head.reveal .pt-nav .nav-item.logo,
 body.cms-home.page-layout-pt2000-landing #head.static .pt-nav .nav-item.logo{
     background-image: url("../../assets/img/logo.png");
 }
+/*Sub menu*/
+
+.sub-menu {
+    position: relative;
+    width: 100%;
+    max-height: 0px;
+    height: 500px;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(236, 236, 236, 0);
+    -webkit-transition: max-height 0.5s ease, border-bottom 0.2s ease;
+    -moz-transition: max-height 0.5s ease, border-bottom 0.2s ease;
+    transition: max-height 0.5s ease, border-bottom 0.2s ease;
+}
+.sub-container {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: none;
+    background-color: #F7F5F2;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+.columns.is-gapless > .link-column{
+    margin-left: 50px;
+}
+.columns.is-gapless > .link-column:first-child{
+    margin-left: 0;
+}
+.link-menu-group.first-group {
+    margin-top: 0;
+}
+.link-column ul {
+    text-align: left;
+}
+.link-menu-group {
+    margin: 10px 0;
+}
+.category-view-top-level-item, .link-menu-top-level-item {
+    font-weight: 600;
+}
+.category-view-top-level-item, .category-view-second-level-item, .link-menu-top-level-item, .link-menu-second-level-item {
+    display: block;
+    margin: 3px 0;
+    color: #363B40;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}
+.image-nav-item  a.img-link-item {
+    display: block;
+    position: relative;
+}
+.image-nav-item  a.img-link-item:hover{
+    opacity: 1;
+}
+.image-nav-item a::before, .image-nav-item a::after {
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    width: 0;
+    height: 0;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -moz-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    z-index: 99;
+    content: "";
+}
+.image-nav-item a::before{
+    top: 0;
+    right: 0;
+}
+.image-nav-item a:hover::before,
+.image-nav-item a:hover::after
+ {
+    width: 100%;
+    height: 100%;
+}
+.image-nav-item a::after{
+    bottom: 0;
+    left: 0;
+}
+
+.sub-container a {
+    display: inline-block;
+    text-decoration: none;
+    color: #363B40;
+}
+.sub-container a:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+.sub-container .sale-nav-item {
+    color: #c45252; }
+  .sub-container .sale-nav-item:hover {
+    color: #de9e9e; }
+/*--------------------------*/
 .megatron {
     position: relative;
     background-size: cover;
